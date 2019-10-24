@@ -7,10 +7,14 @@ import database
     return user_input
 
 site_name = site_name()"""
+# <DINA> because you can not do circal import : means if main knows HTMLParser , HTMLParser can NOT know main
+# best practice - no on knows main , and main knows every on ehe needs.
+# if you want to use the site name from main , you should pass it as parameter
 
 
 
 def expected_vs_found():
+
     for key, value in HTMLParser.tag_count.items():
         if key in database.expected_tags.keys():
             print(key + ':  ', database.expected_tags[key], 'expected,' ' found:', value)
