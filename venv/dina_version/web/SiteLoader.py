@@ -15,5 +15,5 @@ class SiteLoader:
         except Exception as error:
             print (error)
             print("Site is unreachable")
-            return None
+            exit(-1)
         return self.html_page
